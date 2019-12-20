@@ -139,7 +139,7 @@ Ticker_last_row = Cells(Rows.Count, 9).End(xlUp).Row
             ' Print the Ticker in the Summary Table
             Range("P" & 2).Value = TickerName
             Range("Q" & 2).Value = GreatestIncrease
-        
+            Range("Q" & 2).NumberFormat = "0.00\%"
         End If
 
     Next i
@@ -172,6 +172,7 @@ Ticker_last_row = Cells(Rows.Count, 1).End(xlUp).Row
             ' Print the Ticker in the Summary Table
             Range("P" & 3).Value = Ticker
             Range("Q" & 3).Value = GreatestDecrease
+            Range("Q" & 3).NumberFormat = "0.00\%"
           
         End If
 
@@ -220,8 +221,8 @@ Sub MasterCalculateStockData()
     Range("L" & 1).Value = "TotalStockVolume"
     Range("P" & 1).Value = "TickerName"
     Range("Q" & 1).Value = "Value"
-    Range("O" & 2).Value = "Greatest%Increase"
-    Range("O" & 3).Value = "Greatest%Decrease"
+    Range("O" & 2).Value = "Greatest % Increase"
+    Range("O" & 3).Value = "Greatest % Decrease"
     Range("O" & 4).Value = "GreatestTotalVolume"
 
 'Call the functions to analyze the data
