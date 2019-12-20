@@ -8,6 +8,7 @@ Dim Ticker_Table_Row As Integer
 Ticker_Table_Row = 2
 
 Ticker_last_row = Cells(Rows.Count, 1).End(xlUp).Row
+' or ws.UsedRange.Rows.Count
 
         ' Loop through all Tickers
         For i = 2 To Ticker_last_row
@@ -84,6 +85,7 @@ StartValue = Cells(2, 3).Value
                     'PercentChange = (YearlyChange * 100) / StartValue
                     PercentChange = YearlyChange / StartValue
                     'need to change number format to %, to include the % symbol and calulate final %
+                    
                 Else
                     PercentChange = 0
                 End If
@@ -94,6 +96,7 @@ StartValue = Cells(2, 3).Value
             Range("J" & Ticker_row).Value = YearlyChange
             'similarly, PercentChange and TotalStockVolume
             Range("K" & Ticker_row).Value = PercentChange
+            Columns("K").NumberFormat = "0.00%"
     
             ' Add one to the ticker_row
             Ticker_row = Ticker_row + 1
@@ -103,9 +106,7 @@ StartValue = Cells(2, 3).Value
     
             ' If the cell immediately following a row is the same Ticker...
             ' Add to the YearlyChange
-        Else
-            'YearlyChange = YearlyChange + Cells(i, 10).Value
-
+        
         End If
 
     Next i
@@ -138,9 +139,7 @@ Ticker_last_row = Cells(Rows.Count, 9).End(xlUp).Row
             ' Print the Ticker in the Summary Table
             Range("P" & 2).Value = TickerName
             Range("Q" & 2).Value = GreatestIncrease
-        Else
-           ' GreatestIncrease = Cells(i, 11).Value
-
+        
         End If
 
     Next i
@@ -173,11 +172,7 @@ Ticker_last_row = Cells(Rows.Count, 1).End(xlUp).Row
             ' Print the Ticker in the Summary Table
             Range("P" & 3).Value = Ticker
             Range("Q" & 3).Value = GreatestDecrease
-                          
-        Else
-           ' GreatestDecrease = Cells(i, 11).Value
-           ' Range("P" & 3).Value = Ticker
-           ' Range("Q" & 3).Value = GreatestDecrease
+          
         End If
 
     Next i
@@ -209,9 +204,6 @@ Ticker_last_row = Cells(Rows.Count, 9).End(xlUp).Row
             ' Print the output to the Summary Table
             Range("P" & 4).Value = TickerName
             Range("Q" & 4).Value = GreatestTotalVolume
-        Else
-           ' GreatestIncrease = Cells(i, 11).Value
-
         End If
 
     Next i
@@ -219,7 +211,7 @@ Ticker_last_row = Cells(Rows.Count, 9).End(xlUp).Row
 End Sub
 
 Sub MasterCalculateStockData()
-'CalculateStockData button will call all the function to calculate all required values
+'AnalyzeStockData button will call all the function to calculate all required values
 
 'Build The Table for the data output
     Range("I" & 1).Value = "TickerName"
