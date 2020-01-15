@@ -1,0 +1,6 @@
+Observable Trends from the Given Data:
+
+1.	Gender demographic shows a large difference between nuber of male to female ratio (about 81 to 16)
+2.	Youngters are more attracted to this game as compared to older people.
+3.	When the sale price is lower, the total purchase value increases, showing that the players want to buy the lowest priced item; 
+	lower price increases the total number of sales and hence it is more profitable.
