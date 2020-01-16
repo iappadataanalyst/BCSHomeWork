@@ -1,0 +1,15 @@
+
+Observations:
+1.	The given data is for preclinical/ laboratory study where mouse were treated with certain drugs that are under development as potential therapeutic agents for cancer.
+	There is no patient or human data available, and hence the data itseld could not be called as clinical trial, as mentioned. 
+	Clinical trials are the studies conducted on human subjects and not on mice.
+
+2.	Capomulin seems to be efficinet over other drugs used in this animal models. 
+	But there were no data available about the safety of the drug, other than survival rate. 
+	Most chemotherapeutic drugs are more toxic than their efficay which determines their clinical use.
+
+3.	For mouse or animal studies, untreated controls would better mimic clinical conditions than Placebo, 
+	because we never trained the mice psychologically to know that they are getting treatment for cure, 
+	(infact it would be additional stress for them which would psychologically promote the cancer)
+	and no way we can expect they emntally think that they are getting cured. 
+	Most of the times it is the thought process that controll physiologicall activities including activation of immune systen that will cure the disease.
