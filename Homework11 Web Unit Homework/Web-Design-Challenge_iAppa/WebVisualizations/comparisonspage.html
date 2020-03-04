@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="google" content="notranslate">
+    <title>Comparision </title>
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--CSS Link-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!--Navigation Section-->
+    <div class="navigation">
+            <nav class="navbar navbar-expand-md navbar-light">
+           
+              <a class="navbar-brand" style="background-color: #0BADA6;" href="indexpage.html">Latitude</a>
+           
+         
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <!-- Drop down -->
+           <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <div class="navbar-nav align-items-end">
+          <ul class="navbar-nav mr-auto" >
+            <li class="nav-item dropdown" >
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Plots
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="temperaturevisualizationpage.html">Max Temperature</a>
+                  <a class="dropdown-item" href="humidityvisualizationpage.html">Humidity</a>
+                  <a class="dropdown-item" href="cloudinessvisualizationpage.html">Cloudiness</a>
+                  <a class="dropdown-item" href="windspeedvisualizationpage.html">Wind Speed</a>
+                </div>
+              </li>
+          <!--end -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="comparisons.html">Comparison</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="datapage.html">Data</a>
+                  </li>
+        
+                </ul>
+                
+              </div>
+            </div>
+            </nav>
+    </div>
+    <!-- Content Section -->
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-7 col-md-12">
+            <!-- Left box  -->
+            <div class="box" style="padding-bottom: 120px;">
+              <h3 class="title">Comparison: Latitude vs X</h3>
+              <hr>
+              <p>Click any plot to get an in-depth analysis.</p>
+            
+              <div class="container"  style="padding-bottom: 40px;">
+                <div class="row">
+                    <div class="col-lg-6" style="padding: 30px;">
+                        <div class="title">vs. Max Temperature</div>
+                        <a href="temperaturevisualizationpage.html">
+                            <img class="panel" src="assets/images/Fig1.png" alt="Max Temperature Image">
+                        </a>
+                    </div>
+                    <div class="col-lg-6" style="padding: 30px;">
+                        <div class="title">vs. Humidity</div>
+                    <a href="humidityvisualizationpage.html">
+                      <img class="panel" src="assets/images/Fig2.png" alt="Humidity Image">
+                    </a>
+                  </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-lg-6" style="padding: 30px;">
+                        <div class="title">vs. Cloudiness</div>
+                        <a href="cloudinessvisualizationpage.html">
+                        <img class="panel" src="assets/images/Fig3.png" alt="Cloudiness Image">
+                        </a>
+                    </div>
+                    <div class="col-lg-6" style="padding: 30px;">
+                        <div class="title">vs. Wind Speed</div>
+                        <a href="windspeedvisualizationpage.html">
+                        <img class="panel" src="assets/images/Fig4.png" alt="Wind Speed Image">
+                        </a>
+                    </div>
+                       
+                </div>
+              </div>
+    
+    
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
