@@ -1,104 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
+​
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>The Mars Channel</title>
+  <title>Mars Facts</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="style.css">
-
 </head>
-
-<body class='bg-light my-5'>  
-  
+​
+<body>
   <div class="container">
-
-    <div class="jumbotron bg-dark text-white jumbotron-fluid text-center" >
-      <h1>Welcome to the Mars Channel</h1>
-      <p><a class="btn btn-secondary btn-lg bg-light text-dark" href="/scrape" role="button">Find out What's New with Mars</a></p>
+​
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape the Data</a></p>
     </div>
-    
-    <!-- Mars Info -->
+​
+    <div class="container-fluid">
     <div class="row" >
-      <div class="col-md-6">
-        <h1>Did you know...</h1><br>
-        <h4 class="heading">{{listings.headline}}</h4>
-        <h6> {{listings.article}}</h6><br><br>
-      </div>
-      <div class="col-md-6">
-        <h1>Weather Report</h1><br>
-        <h5 class='weather'>{{listings.weather}}</h5>
-      </div>
+      <div class="col-md-12">
+        <h2>Latest Mars News</h2>
+        <h3 class="heading"><strong>{{mars.news_title}} </strong></h3>
+        <p> {{mars.news_paragraph}}</p>
+          </div>
     </div>
-    <div>
-      <div class="card text-center bg-secondary text-white">
-        <div class="card-body">
-          <h2 class='card-title'>Fun Facts!!!</h2>
+  </div>
+​
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Featured Mars Image</h2>
+          <img src="{{mars.featured_image_url}}" alt="Mars featured image" style="width:725px;height:725px;border:0;"/>
         </div>
-      </div>
-      <div class='container fun-facts text-center' width=100% >
-        <div class='row'>
-          <div class='col'><br>
-            {{ listings.tables[0] | safe}}
-          </div>
-          <div class='col'><br>
-            {{listings.tables[1] | safe}}
-          </div>
-        </div>
-    </div>    
-      </div>
-    <div>
-      <div class="card text-center bg-secondary text-white">
-        <div class="card-body">
-          <h2 class='card-title'>Featured Mars Image</h2>
-        </div>
-      </div>
-      <h2></h2>
-      <img src={{listings.image}} width=100% padding=30px><br>
-    </div>
-    
-      <div id='compsec' class='widescreen'>
-        <h2></h2>
-        <div class="card text-center bg-secondary text-white">
-          <div class="card-body">
-            <h2 class='card-title'>Martian Hemispheres</h2>
-          </div>
-        </div>    
-          
-        <br>
-        <i></i>
-        <div class='container hemispheresec' style="text-align: center">
-          <div class='row justify-content-center'>
-            <div class='col'>
-              <h4>{{listings.hemispheres[0].title}}</h4>
-              <a href='temp.html'><img src={{listings.hemispheres[0].img_url}} width=100% alt='Plot of Latitude vs Max Temperature' title='Latitude vs Max Temperature'></a>
-            </div>
-            <div class='col'>
-              <h4>{{listings.hemispheres[1].title}}</h4>
-              <a href='humid.html'><img src={{listings.hemispheres[1].img_url}} width=100% alt='Plot of Latitude vs Humidity' title='Latitude vs Humidity'></a>
+      
+        <div class="col-md-4">
+          <div class="row weather-box">
+            <div class="col-md-12">
+              <h3>Current Weather On Mars</h3>
+              <p>
+                {{mars.weather}}
+              </p>
             </div>
           </div>
-          <div class='row'>
-            <div class='col'>
-              <h4>{{listings.hemispheres[2].title}}</h4>
-              <a href='cloudy.html'><img src={{listings.hemispheres[2].img_url}} width=100% alt='Plot of Latitude vs Cloudiness' title='Latitude vs Cloudiness'></a>
-            </div>
-            <div class='col'>
-              <h4>{{listings.hemispheres[3].title}}</h4>
-              <a href='wind.html'><img src={{listings.hemispheres[3].img_url}} width=100% alt='Plot of Latitude vs Wind Speed' title='Latitude vs Wind Speed'></a>
-            </div>
+​
+          <div class="col-md-12">
+            <h3>Mars Facts</h3>
+            {{mars.facts1 | safe }}
           </div>
-        </div>
-      </div>    
-    
-    
-    </div>
 
+          <div class="col-md-12">
+            <h3>Mars Compared to Earth</h3>
+            {{mars.facts2 | safe }}
+          </div>
+
+        </div>
+      </div>
+    </div>
+   
+    
+    <div class="container-fluid">
+​
+      <div class="jumbotron  text-center">
+        <h1>Mars Hemispheres</h1>
+        <br><br/>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6">
+               <p> {{mars.hemi1_title}} </p>
+              <img src="{{mars.hemi1_img}}" alt="Mars featured image" style="width:450px;height:450px;border:0;"/>
+            </div>
+            <div class="col-md-6">
+              <p> {{mars.hemi2_title}} </p>
+              <img src="{{mars.hemi2_img}}" alt="Mars featured image" style="width:500px;height:450px;border:0;"/>
+            </div>
+          </div>
+          <br><br/>
+          <div class="row">
+            <div class="col-md-6">
+              <p> {{mars.hemi3_title}} </p>
+              <img src="{{mars.hemi3_img}}" alt="Mars featured image" style="width:450px;height:450px;border:0;"/>
+            </div>
+            <div class="col-md-6">
+              <p> {{mars.hemi4_title}} </p>
+              <img src="{{mars.hemi4_img}}" alt="Mars featured image" style="width:500px;height:450px;border:0;"/>
+            </div>
+          </div>
+    ​</div>
   </div>
 </body>
-
+​
 </html>
-© 2020 GitHub, Inc.
